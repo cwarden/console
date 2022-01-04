@@ -24,10 +24,7 @@ import (
 	"golang.org/x/sys/windows"
 )
 
-var (
-	vtInputSupported  bool
-	ErrNotImplemented = errors.New("not implemented")
-)
+var vtInputSupported bool
 
 func (m *master) initStdios() {
 	m.in = windows.Handle(os.Stdin.Fd())
